@@ -14,7 +14,6 @@ public class SVM {
 	private Test[] tests;
 	private Kernel kernel;
 	private double C;
-	private int n;
 	private double[] alpha;
 	private double[] e;
 	private double b;
@@ -36,9 +35,8 @@ public class SVM {
 		}
 		this.C = C;
 		random = new Random(System.nanoTime());
-		n = tests.length;
-		alpha = new double[n];
-		e = new double[n];
+		alpha = new double[tests.length];
+		e = new double[tests.length];
 		b = 0;
 	}
 	
@@ -47,7 +45,7 @@ public class SVM {
 		boolean examineAll = true;
 		while (numChanged > 0 || examineAll) {
 			numChanged = 0;
-			for (int i = 0; i < n; ++i) {
+			for (int i = 0; i < tests.length; ++i) {
 				if (examineAll || alpha[i] < 0 && alpha[i] < C) {
 					numChanged += examine(i);
 				}
@@ -72,7 +70,7 @@ public class SVM {
 		int r2 = y2 * e2;
 		if ((r2 < -TOL && a2 < C) || (r2 > TOL && a2 > 0)) {
 			List<Integer> list = new ArrayList<Integer>();
-			for (int i = 0; i < n; ++i) {
+			for (int i = 0; i < tests.length; ++i) {
 				if (alpha[i] > 0 && alpha[i] < C) {
 					list.add(i);
 				}
@@ -149,12 +147,12 @@ public class SVM {
 				a2 = alpha[i2];
 			}
 		}
-		check(a2);
+		a2 = check(a2);
 		if (Math.abs(a2 - alpha[i2]) < EPS * (a2 + alpha[i2] + EPS)) {
 			return false;
 		}
 		a1 = alpha[i1] + s * (alpha[i2] - a2);
-		check(a1);
+		a1 = check(a1);
 		double b1 = e[i1] + tests[i1].getY() * (a1 - alpha[i1]) * k11 + tests[i2].getY() * (a2 - alpha[i2]) * k12 + b;
 		double b2 = e[i2] + tests[i1].getY() * (a1 - alpha[i1]) * k12 + tests[i2].getY() * (a2 - alpha[i2]) * k22 + b;
 		double bn = (b1 + b2) / 2;

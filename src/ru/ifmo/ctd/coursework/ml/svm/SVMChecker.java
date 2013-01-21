@@ -25,11 +25,11 @@ public class SVMChecker {
 		this.b = b;
 	}
 	
-	public int check(double[] x) {
+	public double value(double[] x) {
 		double wx = 0;
 		for (int i = 0; i < tests.length; ++i) {
 			wx += (alpha[i] * tests[i].getY() * kernel.scalar(tests[i].getFeatures(), x));
 		}
-		return wx - b > 0 ? 1 : -1;
+		return wx - b;
 	}
 }
