@@ -16,4 +16,9 @@ public class GaussianKernel implements Kernel {
 		}
 		return Math.exp(-gamma * ans);
 	}
+	
+	@Override
+	public String toString() {
+		return "GaussianKernel : " + gamma;
+	}
 }

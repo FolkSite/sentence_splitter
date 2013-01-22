@@ -207,4 +207,8 @@ public class SVM {
 		}
 		return b;
 	}
+	
+	public String toString() {
+		return "SVM " + kernel.toString() + " " + C;
+	}
 }

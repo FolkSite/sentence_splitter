@@ -7,24 +7,22 @@ import ru.ifmo.ctd.coursework.ml.svm.Test;
 
 public class FeaturesCollector {
 	private ArrayList<Test> featuresCollection;
-
-	public FeaturesCollector() {
-		featuresCollection = new ArrayList<Test>();
-	}
 	
-	public FeaturesCollector(String inputFileName) {
+	public FeaturesCollector(String inputFileName) throws FileNotFoundException {
 		featuresCollection = new ArrayList<Test>();
 		parsePunctuationMarksFromFile(inputFileName);
 	}
 	
-	public void parsePunctuationMarksFromFile(String fileName) {
+	public void parsePunctuationMarksFromFile(String fileName) throws FileNotFoundException {
+		Scanner scanner = null;
 		try {
-			Scanner scanner = new Scanner(new BufferedInputStream(new FileInputStream(new File(fileName))), "UTF-8");
+			scanner = new Scanner(new BufferedInputStream(new FileInputStream(new File(fileName))), "UTF-8");
 			String fileContent = scanner.useDelimiter("\\Z").next();  // Reading whole file
 			parseEachPunctuationMark(fileContent);
-		} catch (IOException e) {
-			System.err.println("Error: could not open input file");
-			e.printStackTrace();
+		} finally {
+			if (scanner != null) {
+				scanner.close();
+			}
 		}
 	}
 	

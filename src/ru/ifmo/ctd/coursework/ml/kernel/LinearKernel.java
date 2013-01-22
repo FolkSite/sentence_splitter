@@ -10,4 +10,9 @@ public class LinearKernel implements Kernel {
 		}
 		return ans;
 	}
+	
+	@Override
+	public String toString() {
+		return "LinearKernel";
+	}
 }

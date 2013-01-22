@@ -16,4 +16,9 @@ public class InhomogeneousKernel implements Kernel {
 		}
 		return Math.pow(ans, degree);
 	}
+	
+	@Override
+	public String toString() {
+		return "InhomogeneousKernel : " + degree;
+	}
 }
