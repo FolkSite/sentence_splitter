@@ -33,6 +33,7 @@ public class FeaturesCollector {
 	
 	// Expecting that there is line ending between sentences and no other line endings in s
 	public void parseEachPunctuationMark(String s) {
+		s = s.replaceAll("\\s+\\n", "\\n");
 		for (int i = 1; i < s.length(); ++i) {
 			char c = s.charAt(i);
 			if (c == '.' || c == '?' || c == '!') {
