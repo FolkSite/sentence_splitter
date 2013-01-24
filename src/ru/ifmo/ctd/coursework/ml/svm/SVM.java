@@ -1,10 +1,14 @@
 package ru.ifmo.ctd.coursework.ml.svm;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import ru.ifmo.ctd.coursework.ml.Constants;
+import ru.ifmo.ctd.coursework.ml.FeaturesCollector;
 import ru.ifmo.ctd.coursework.ml.kernel.Kernel;
 
 public class SVM {
@@ -40,7 +44,29 @@ public class SVM {
 		b = 0;
 	}
 	
-	public void train() {		
+	private void dump() {
+		PrintWriter result = null;
+		try {
+			result = new PrintWriter(Constants.RESULT);
+			result.println(this);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			if (result != null) {
+				result.close();
+			}
+		}
+	}
+	
+	public void train() {
+		System.out.println("Train started");
+		Test[] test = null;
+		try {
+			 test = new FeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		int steps = 0;
 		int numChanged = 0;
 		boolean examineAll = true;
 		while (numChanged > 0 || examineAll) {
@@ -55,8 +81,21 @@ public class SVM {
 			} else if (numChanged == 0) {
 				examineAll = true;
 			}
+			if (++steps % 100 == 0) {
+				dump();
+				SVMChecker c = new SVMChecker(tests, kernel, alpha, b);
+				int all = test.length;
+				int err = 0;
+				for (Test t : test) {
+					if ((c.value(t.getFeatures()) > 0) != (t.getY() == 1)) {
+						++err;
+					}
+				}
+				System.out.println("Iteration " + steps + " [ERRORS] : " + err + " / " + all + " : " + String.format("%.2f", (double)err / all * 100));
+			}
 		}
 		isDone = true;
+		System.out.println("Train complete");
 	}
 	
 	private int e(int i) {
@@ -86,10 +125,11 @@ public class SVM {
 					return 1;
 				}
 			}
-			
-			for (int i = random.nextInt(list.size()), step = 0; step < list.size(); ++i, ++step) {
-				if (takeStep((list.size() + i) % list.size(), i2)) {
-					return 1;
+			if (list.size() > 0) {
+				for (int i = random.nextInt(list.size()), step = 0; step < list.size(); ++i, ++step) {
+					if (takeStep((list.size() + i) % list.size(), i2)) {
+						return 1;
+					}
 				}
 			}
 			for (int i = random.nextInt(tests.length), step = 0; step < tests.length; ++i, ++step) {
@@ -209,6 +249,16 @@ public class SVM {
 	}
 	
 	public String toString() {
-		return "SVM " + kernel.toString() + " " + C;
+		StringBuilder sb = new StringBuilder();
+		sb.append(kernel);
+		sb.append('\n');
+		sb.append(alpha.length);
+		sb.append('\n');
+		for (int i = 0; i < alpha.length; ++i) {
+			sb.append(alpha[i] + " ");
+		}
+		sb.append('\n');
+		sb.append(b);
+		return sb.toString();
 	}
 }

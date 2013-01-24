@@ -10,15 +10,15 @@ public class SVMChecker {
 	private double b;
 	
 	public SVMChecker(Test[] tests, Kernel kernel, double[] alpha, double b) {
-		if (tests != null) {
+		if (tests == null) {
 			throw new NullPointerException("tests is null");
 		}
 		this.tests = tests;
-		if (kernel != null) {
+		if (kernel == null) {
 			throw new NullPointerException("kernel is null");
 		}
 		this.kernel = kernel;
-		if (alpha != null) {
+		if (alpha == null) {
 			throw new NullPointerException("alpha is null");
 		}
 		this.alpha = alpha;

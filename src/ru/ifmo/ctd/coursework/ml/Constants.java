@@ -4,4 +4,5 @@ public class Constants {
 	public static final String TRAIN_FILE = "data/train.txt";
 	public static final String TEST_FILE = "data/test.txt";
 	public static final String RESULT = "result/svm.txt";
+	public static final String RAW = "data/raw.txt";
 }

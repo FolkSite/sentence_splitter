@@ -19,6 +19,6 @@ public class GaussianKernel implements Kernel {
 	
 	@Override
 	public String toString() {
-		return "GaussianKernel : " + gamma;
+		return "GaussianKernel " + gamma;
 	}
 }
