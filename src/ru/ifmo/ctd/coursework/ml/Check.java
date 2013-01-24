@@ -1,8 +1,12 @@
 package ru.ifmo.ctd.coursework.ml;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.StringTokenizer;
 
 import ru.ifmo.ctd.coursework.ml.kernel.*;
@@ -24,12 +28,40 @@ public class Check {
 		}
 	}
 	
-	public static void main(String[] args) {
+	private static String readFile(String fileName) throws IOException {
+		InputStreamReader is = null;
+		try {
+			is = new InputStreamReader(new FileInputStream(fileName));
+			StringBuilder sb = new StringBuilder();
+			int c = -1;
+			while ((c = is.read()) != -1) {
+				sb.append((char) c);
+			}
+			return sb.toString();
+		} finally {
+			if (is != null) {
+				is.close();
+			}
+		}
+	}
+	
+	private static Map<Integer, String> context(String s) {
+		Map<Integer, String> context = new HashMap<Integer, String>();
+		int cnt = 0;
+		for (int i = 0; i < s.length(); ++i) {
+			if (s.charAt(i) == '.' || s.charAt(i) == '!' || s.charAt(i) == '?') {
+				String prefix = s.substring(Math.max(0, i - 15), i);
+				String suffix = s.substring(i + 1, Math.min(s.length(), i + 15 + 1));
+				context.put(cnt++, prefix + "[" + s.charAt(i) + "]" + suffix);
+			}
+		}
+		return context;
+	}
+	
+	private static SVMChecker checker(Test[] train, String fileName) throws IOException {
 		BufferedReader bf = null;
 		try {
-			Test[] train = new FeaturesCollector(Constants.TRAIN_FILE).getFeaturesCollection().toArray(new Test[0]);
-			Test[] test = new FeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
-			bf = new BufferedReader(new FileReader(Constants.RESULT));
+			bf = new BufferedReader(new FileReader(fileName));
 			String[] ss = bf.readLine().split("\\s+");
 			String name = ss[0];
 			String[] arg = new String[ss.length - 1];
@@ -44,26 +76,33 @@ public class Check {
 				a[i] = Double.parseDouble(st.nextToken());
 			}
 			double b = Double.parseDouble(bf.readLine());
-			SVMChecker checker = new SVMChecker(train, kernel, a, b);
+			return new SVMChecker(train, kernel, a, b);
+		} finally {
+			if (bf != null) {
+				bf.close();
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		try {
+			Test[] train = new FeaturesCollector(Constants.TRAIN_FILE).getFeaturesCollection().toArray(new Test[0]);
+			Test[] test = new FeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
+			SVMChecker checker = checker(train, Constants.RESULT);
+			Map<Integer, String> context = context(readFile(Constants.TEST_FILE));
 			int err = 0;
 			int all = test.length;
-			//for (Test t : test) {
 			for (int i = 0; i < test.length; ++i) {
 				Test t = test[i];
-				if ((checker.value(t.getFeatures()) > 0) != (t.getY() == 1)) {
+				double val = checker.value(t.getFeatures());
+				if ((val > 0) != (t.getY() == 1)) {
 					++err;
-					System.out.println(i);
+					System.out.println("[ERROR] : " + (t.getY() == 1) + "\n" + context.get(i));
 				}
 			}
-			System.out.println("[ERRORS] : " + err + " / " + all + " " + String.format("%.2f", (double)err / all * 100));
+			System.out.println("[ERRORS] : " + err + "/" + all + " " + String.format("%.2f", (double)err / all * 100));
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				bf.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
 	}
 }
