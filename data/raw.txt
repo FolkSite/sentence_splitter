@@ -5,7 +5,7 @@
 Следовательно, положение подп. 1 п. 1 ст. 162 НК РФ не может рассматриваться как нарушающее закреплённые в Конституции Российской Федерации право каждого на свободное использование своих способностей и имущества для предпринимательской и иной не запрещённой законом деятельности и право собственности.
 А если представить, что растить ребёнка надо было в условиях постоянного шума и пыли, при отсутствии воды и отопления...
 О приверженности России общепризнанным принципам и нормам международного права свидетельствует ч. 4 ст. 15 Конституции РФ:" Общепризнанные принципы и нормы международного права и международные договоры России являются составной частью её правовой системы.
-УНИДРУА был учреждён на основе Соглашения между итальянским правительством и Советом Лиги Наций от 3.10.1925 г. 
+УНИДРУА был учреждён на основе Соглашения между итальянским правительством и Советом Лиги Наций от 3.10.1925 г.
 В 1940 г. Институт был отделён от Лиги Наций и подвергся реорганизации на самостоятельной основе и с новым Уставом, подписанным государствами-членами 15.03.1940 г.
 Страховые взносы в размере 6000 руб. не включаются в налоговую базу по ЕСН.
 В соответствии с п. 4 ст. 1 Закона РФ от 27.12.91 N 2116-1 "О налоге на прибыль предприятий и организаций" ( далее -- Закон) плательщиками налога на прибыль являются компании, фирмы, любые другие организации, образованные в соответствии с законодательством иностранных государств, которые осуществляют предпринимательскую деятельность в Российской Федерации через постоянные представительства.
@@ -20,7 +20,8 @@
 В соответствии с ч. 1 ст. 552 ГК РФ покупатель приобретает право пользования той частью земельного участка, которая занята недвижимостью и необходима для её использования.
 В этом случае будет действовать общее правило о том, что убытки подлежат возмещению в полном объёме (ст. 15 ГКРФ).
 К 2003 г. в её состав входили представители 36 государств.
-Налогоплательщик внёс в бюджет плату за загрязнение окружающей среды за IV квартал 2001 г. Считая, что в нарушение ст. 17 НК РФ все существенные элементы платы за загрязнение окружающей природной среды как налога установлены не законодательным актом РФ, а постановлением Правительства РФ от 28.08.92 N 632, признанным незаконным решением Верховного суда РФ, налогоплательщик обратился в арбитражный суд с иском о возврате излишне внесённых в бюджет сумм платы за загрязнение окружающей среды.
+Налогоплательщик внёс в бюджет плату за загрязнение окружающей среды за IV квартал 2001 г.
+Считая, что в нарушение ст. 17 НК РФ все существенные элементы платы за загрязнение окружающей природной среды как налога установлены не законодательным актом РФ, а постановлением Правительства РФ от 28.08.92 N 632, признанным незаконным решением Верховного суда РФ, налогоплательщик обратился в арбитражный суд с иском о возврате излишне внесённых в бюджет сумм платы за загрязнение окружающей среды.
 Определением от 19.05.04 N 5пв-04 Президиум Верховного суда РФ отменил Определение Судебной коллегии от 13.02.03 N 78-Впр03-3.
 Конституционный суд РФ указал, что по существу поставленной заявителем проблемы из положений оспариваемого подп. 1 п. 1 ст. 162 НК РФ следует, что налоговая база НДС, определённая в соответствии со ст. 153- 158 НК РФ, увеличивается на суммы авансовых платежей, полученных в счёт предстоящих поставок товаров (выполнения работ, оказания услуг).
 Ситуация 2 -- на основании п. 1 ст. 237 НК РФ организация обязана исчислить и уплатить ЕСН в размере 2136 руб.
@@ -52,15 +53,15 @@
 Страховые взносы, оплачиваемые работодателем по договором пенсионного страхования или негосударственного пенсионного обеспечения, в соответствии со ст. 237 НК РФ являются объектом обложения ЕСН, поскольку порядок и условия страхования, предусмотренные данными договорами, не соответствуют требованиям, предусмотренным п. 7 ст. 238 НК РФ.
 В апреле 2003 г. организация заключила договор долгосрочного страхования сотрудников.
 Между Российской Федерацией и Финляндской Республикой заключено Соглашение от 04.05.96 "Об избежании двойного налогообложения в отношении налога на доходы".
-Согласно ст. 2 Закона РФ от 27.11.92 N 4015 - 1 "Об организации страхового дела в Российской Федерации" (ред. от 25. 04. 02) страхование представляет собой отношения по защите имущественных интересов физических и юридических лиц при наступлении определённых событий (страховых случаев) за счёт денежных фондов, формируемых из уплачиваемых ими страховых взносов( страховых премий).
+Согласно ст. 2 Закона РФ от 27.11.92 N 4015 - 1 "Об организации страхового дела в Российской Федерации" (ред. от 25.04.02) страхование представляет собой отношения по защите имущественных интересов физических и юридических лиц при наступлении определённых событий (страховых случаев) за счёт денежных фондов, формируемых из уплачиваемых ими страховых взносов( страховых премий).
 Не подлежат налогообложению суммы страховых взносов по договорам добровольного личного страхования работников, заключаемым исключительно на случай наступления смерти застрахованного лица или утраты застрахованным лицом трудоспособности в связи с исполнением им трудовых обязанностей (п. 7 ст. 238 НК РФ).
-Верховный суд РФ решением от 28.03.02 N ГКПИ признал постановление Правительства РФ от 28. 08. 92 N 632" Об утверждении порядка определения платы и её предельных размеров за загрязнение окружающей природной среды, размещение отходов, другие виды вредного воздействия" не действующим и не подлежащим применению с момента вступления решения суда в законную силу.
+Верховный суд РФ решением от 28.03.02 N ГКПИ признал постановление Правительства РФ от 28.08.92 N 632" Об утверждении порядка определения платы и её предельных размеров за загрязнение окружающей природной среды, размещение отходов, другие виды вредного воздействия" не действующим и не подлежащим применению с момента вступления решения суда в законную силу.
 Сумма ЕСН, подлежащая перечислению, составит 10680 руб., в том числе.
 Согласно ч. 2 ст. 55 Конституции РФ в России не должны издаваться законы, отменяющие или умаляющие права и свободы человека и гражданина.
 Значимость Определения от 14.07.2004 г. в том, что оно создаёт прецедент пересмотра высшим судебным органом собственного решения в связи с ошибкой в применении нормы материального права.
 В апреле 2003 г. организация осуществила страхование гражданской ответственности за причинение вреда жизни, здоровью или имуществу других лиц при использовании транспортных средств руководителя организации на срок 12 месяцев.
 В соответствии с п. 6 ст. 270 НК РФ не учитываются для цепей налогообложения страховые взносы, уплачиваемые по договорам добровольного страхования, за исключением страховых взносов по договорам страхования, предусмотренных ст. 263 НК РФ.
-Сумма уплаченных страховых взносов -- 30000 руб. 
+Сумма уплаченных страховых взносов -- 30000 руб.
 Расходы на оплату труда составили 260000 руб., в том числе: должностные оклады -- 230000 руб.; начисленные премии -- 30000 руб.
 Согласно ч. 5 ст. 8 Закона РФ от 11.10.91 N 1738 - 1 "О плате за землю" налог на земли, занятые жилищным фондом, взимается со всей площади земельного участка в размере 3% ставок земельного налога, установленных в городах и посёлках городского типа, но не менее 10 руб. за квадратный метр.
 Определением от 13.02.03 N 78-Впр03-3 Судебная коллегия Верховного суда РФ признала незаконным начисление и взыскание земельного налога в размере 100% установленной ставки и обязала налоговый орган произвести перерасчёт суммы земельного налога гражданину А. А. Жукову в размере 3% от установленной ставки за земельный участок( В разрешении спора некоторым образом принял участие и Конституционный суд РФ, приняв Определение от 05.06.03 N 276 - о "Об отказе в принятии к рассмотрению запроса мирового судьи 113-го судебного участка города Санкт-Петербурга О. П. Михайловой о проверке конституционности части пятой статьи 8 Закона РФ" О плате за землю" и жалобы гражданина А. А. Жукова на нарушение его конституционных прав той же нормой").
@@ -68,22 +69,22 @@
 Заявитель считал, что оспариваемые положения подп. 1 п. 1 ст. 162 НК РФ позволяют для признания тех или иных платежей в качестве авансовых принимать во внимание не дату фактической отгрузки товаров на экспорт, а последний день месяца, в котором собран полный пакет документов, представление которых предусмотрено для подтверждения налогоплательщиком права на получение возмещения при обложении налогом на добавленную стоимость по налоговой ставке 0%.
 Положения ст. 487 ГК РФ, конкретизируя правоотношения, связанные с предварительной оплатой товара( авансовый метод), указывают, что в случаях, когда договором купли-продажи предусмотрена обязанность покупателя оплатить товар полностью или частично до передачи продавцом товара (предварительная оплата), покупатель должен произвести оплату в срок, предусмотренный договором, а если такой срок договором не предусмотрен, в срок, определённый в соответствии со ст. 314 ГК РФ.
 В соответствии со ст. 1 Закона РФ от 11.10.91 N 1738 - 1 "О плате за землю" (далее- Закон) плательщиками земельного налога являются собственники земли, землевладельцы и землепользователи.
-Конституционный суд РФ в определениях от 04.10.01 N 183 - 0, от 10.04.02 N 83 - 0 и других указал, что требование об установлении всех существенных элементов налогообложения сформулировано впервые в ст. 17 НК РФ и является обязательным для тех налогов, которые устанавливаются и вводятся после 01. 01. 99.
+Конституционный суд РФ в определениях от 04.10.01 N 183 - 0, от 10.04.02 N 83 - 0 и других указал, что требование об установлении всех существенных элементов налогообложения сформулировано впервые в ст. 17 НК РФ и является обязательным для тех налогов, которые устанавливаются и вводятся после 01.01.99.
 В рамках УНИДРУА был разработан целый ряд конвенций, относящихся к сфере МБП, например Оттавская конвенция УНИДРУА 1988 г. о международном финансовом лизинге; Оттавская конвенция УНИДРУА 1988 г. о международном факторинге и др.
 Как известно, в 2007 г. станет обязательным страхование адвокатами риска своей гражданско-правовой ответственности.
 В июле 2004 г. была поставлена точка в споре, а это значит, что налогоплательщики могут сделать окончательные выводы о практике применения рассматриваемой нормы.
 В данном случае в качестве ошибки суд расценил применение п. 1 ст. 11 НК РФ, согласно которому институты, понятия и термины гражданского, семейного и других отраслей законодательства Российской Федерации, используемые в Налоговом кодексе РФ, применяются в том значении, в каком они используются в этих отраслях законодательства, если иное не предусмотрено Налоговым кодексом РФ.
 Нам остаётся лишь порадоваться за Ивана III: ведь методика вполне могла бы расчетверить также и его, но А. Т. Ф. его помиловал, заменив четвертование Ивана III намного более гуманной акцией -- склеиванием четырёх князей в одного.
 Области, занятые славянами в римское время (II - IV вв. н. э.), не имели каких-либо естественных рубежей.
-Количество клея должно быть рассчитано на работу в течение 3... 4 ч -- срок жизнеспособности клея.
-17. 7. Изменится ли расстояние между шариками (см. предыдущую задачу), если металлическую сферу, окружающую заряжённый шарик, заземлить?
-16. 23. В термос с водой поместили лёд при температуре - 10° C. 
-Масса воды 400 г, масса льда 100 г, начальная температура воды 20° C. 
+Количество клея должно быть рассчитано на работу в течение 3...4 ч -- срок жизнеспособности клея.
+Изменится ли расстояние между шариками (см. предыдущую задачу), если металлическую сферу, окружающую заряжённый шарик, заземлить?
+В термос с водой поместили лёд при температуре - 10° C.
+Масса воды 400 г, масса льда 100 г, начальная температура воды 20° C.
 Определите окончательную температуру воды в термосе.
-6. Блох А. М.« Нобелиана» Григория Ландсберга и Леонида Мандельштама// Природа.
+Блох А. М.« Нобелиана» Григория Ландсберга и Леонида Мандельштама// Природа.
 И лишь после этого Е. С. Фёдоров (1890) и А. Шёнфлис (4891) установили, что теоретико-групповым закономерностям подчинено строение кристаллов; ещё позднее теория групп становится мощным средством исследования в квантовой физике.
-Генератор озона (рис. 1) работает на принципе "тихого" разряда при рабочем напряжении 13 - 15 кВ. 
-Он представляет собой трубчатый аппарат, где в качестве барьера использованы трубки из стекла "Пирекс" диаметром 10 мм. 
+Генератор озона (рис. 1) работает на принципе "тихого" разряда при рабочем напряжении 13 - 15 кВ.
+Он представляет собой трубчатый аппарат, где в качестве барьера использованы трубки из стекла "Пирекс" диаметром 10 мм.
 Электродами высокого напряжения служат алюминиевые стержни диаметром 5, 5 - 6, 0 мм, а низкого напряжения ("земля") -- трубчатые элементы, помещаемые в стальной корпус генератора озона.
 Цит. по: Ф. М. Достоевский в воспоминаниях современников.
 Большой вклад в изучение месторождения внёс П. М. Татаринов, в сводной работе 1967 г. (Месторождения..., 1967)
@@ -95,7 +96,7 @@
 Вот если бы цены на них лежали в диапазоне 8 - 12 тыс. долларов, они составили бы реальную конкуренцию отечественным машинам.
 В 2001 г. вышел закон "Акт о бюджете".
 В частности абзацев 2, 4 п. 1 ст. 6, которые не отвечают конституционным требованиям ясности критериев правовой нормы и, следовательно, не позволяют защищать конституционный принцип равенства всех перед законом.
-Е. Р. Пантелеев, В. В. Пекунов, М. А. Первовский. 
+Е. Р. Пантелеев, В. В. Пекунов, М. А. Первовский.
 Распределенная компонентная модель тестов в системе дистанционного образования ГИПЕРТЕСТ.
 В ряде здравниц практикуют и... винолечение.
 И. Дановская, директор фольклорного центра ТКС Кунцево": Как жаль, что официальная педагогика не ориентирует учителей на возрождение народных традиций, чтобы дети могли почувствовать, что этим можно гордиться!
@@ -157,29 +158,28 @@
 "From the beginning, it took a man with extraordinary qualities to succeed in Mexico," says Kimihide Takimura, president of Mitsui group's Kensetsu Engineering Inc. unit.
 Still, 20 Japanese companies, including giants such as Sanyo Industries Corp., Matsushita Electronics Components Corp. and Sony Corp. have set up shop in the state of Northern Baja California.
 Keeping the Japanese happy will be one of the most important tasks facing conservative leader Ernesto Ruffo when he takes office Nov. 1, as the first opposition governor in Mexico's modern history.
-Other highlights include the revival of "Trinity," Mr. Arpino's rock-scored salute to the Sixties, and, beginning Nov. 24, the late Robert Joffrey's version of "The Nutcracker." City Center, 131 West 55th St., Oct. 24-Dec. 2. (212) 581-7907. 
-PPG Industries Inc., hurt by softness in the U.S. automotive and construction industries, said third-quarter net income fell 5.5% to $106.7 million, or 97 cents a share, from $112.9 million, or $1.03 a share, a year ago. 
+Other highlights include the revival of "Trinity," Mr. Arpino's rock-scored salute to the Sixties, and, beginning Nov. 24, the late Robert Joffrey's version of "The Nutcracker".
+PPG Industries Inc., hurt by softness in the U.S. automotive and construction industries, said third-quarter net income fell 5.5% to $106.7 million, or 97 cents a share, from $112.9 million, or $1.03 a share, a year ago.
 Rep. Byron Dorgan (D., N.D.) has introduced a bill in Congress, co-sponsored by Rep. Lee Hamilton (D., Ind.), that would put the treasury secretary back on the board.
-Rep. Lee Hamilton (D., Ind.) said he and Rep. Byron Dorgan (D., N.D.) are backing away from their proposal to make the Treasury Secretary a voting member of the Federal Reserve panel that sets monetary policy. 
-Salomon Brothers says, "We believe the real estate properties would trade at a discount... after the realty unit is spun off... And what about the cost, and risk, of waiting to realize the hypothetical private market values?".
-Scott Greene, chief foreign exchange dealer with Julius Baer & Co. in New York, fits the description of a "great dollar bear.". 
-He predicted the U.S. unit will skid below 1.80 marks to around 1.78 marks this month and 1.75 marks by the beginning of the new year. 
+Rep. Lee Hamilton (D., Ind.) said he and Rep. Byron Dorgan (D., N.D.) are backing away from their proposal to make the Treasury Secretary a voting member of the Federal Reserve panel that sets monetary policy.
+Scott Greene, chief foreign exchange dealer with Julius Baer & Co. in New York, fits the description of a "great dollar bear.".
+He predicted the U.S. unit will skid below 1.80 marks to around 1.78 marks this month and 1.75 marks by the beginning of the new year.
 Skipper's Inc., Bellevue, Wash., said it signed a definitive merger agreement for a National Pizza Corp. unit to acquire the 90.6% of Skipper's Inc.
-It doesn't own for $11.50 a share, or about $28.1 million. 
+It doesn't own for $11.50 a share, or about $28.1 million.
 So how did a good senator like this end up approving a policy that required the U.S. to warn Mr. Noriega of any coup plot against him?
-"I agree, it's ridiculous," says Mr. Boren, and indeed by now ridiculous may be the only way to describe how the U.S. decides to take -- or rather, not to take -- covert action. 
-Some U.S. firms, notably Salomon Inc. and Morgan Stanley Group Inc., have reaped a hefty chunk of their Japanese earnings from index arbitrage, both for customers and for their own accounts. 
+"I agree, it's ridiculous," says Mr. Boren, and indeed by now ridiculous may be the only way to describe how the U.S. decides to take -- or rather, not to take -- covert action.
+Some U.S. firms, notably Salomon Inc. and Morgan Stanley Group Inc., have reaped a hefty chunk of their Japanese earnings from index arbitrage, both for customers and for their own accounts.
 Morgan Stanley last week joined a growing list of U.S. securities firms that have stopped doing index arbitrage for their own accounts.
-South Korean exports to the U.S. during the period fell 1.6% from a year ago to $15.06 billion, while imports from the U.S. soared 26% to $11.56 billion. 
+South Korean exports to the U.S. during the period fell 1.6% from a year ago to $15.06 billion, while imports from the U.S. soared 26% to $11.56 billion.
 THE CHECKOFF: The National Academy of Engineering gives two inventors of the semiconductor microchip a $350,000 achievement award.
 The United Nations, which is distributing farm tools to returning refugees in Namibia, is rethinking a plan to hand out machetes because of the tense political climate during preparations for independence from South Africa.
 "The decision to distribute machetes at this time, which could be used as weapons, is under review," said a U.N. spokesman.
 The chains include Bloomingdale's, owned by Campeau Corp., Toronto; Saks Fifth Avenue and Marshall Field's, owned by B.A.T Industries PLC, London; and B. Altman & Co. and Sakowitz Inc., owned by Hooker Corp., which is now being managed by a court-appointed provisional liquidator.
-The group is led by Jay Shidler, chief executive officer of Shidler Investment Corp. in Honolulu, and A. Boyd Simpson, chief executive of the Atlanta-based Simpson Organization Inc. 
-Mr. Shidler's company specializes in commercial real-estate investment and claims to have $1 billion in assets; Mr. Simpson is a developer and a former senior executive of L.J. Hooker. 
+The group is led by Jay Shidler, chief executive officer of Shidler Investment Corp. in Honolulu, and A. Boyd Simpson, chief executive of the Atlanta-based Simpson Organization Inc.
+Mr. Shidler's company specializes in commercial real-estate investment and claims to have $1 billion in assets; Mr. Simpson is a developer and a former senior executive of L.J. Hooker.
 They chance alienating the customers they hope to woo by looking like opportunistic sharks.
-Those rumors were confirmed after the end of trading yesterday when the U.S. Agriculture Department announced that the Soviets had bought 1.2 million metric tons of U.S. corn, bringing their U.S. corn purchases confirmed so far this month to about five million metric tons. 
+Those rumors were confirmed after the end of trading yesterday when the U.S. Agriculture Department announced that the Soviets had bought 1.2 million metric tons of U.S. corn, bringing their U.S. corn purchases confirmed so far this month to about five million metric tons.
 Trading companies such as Mitsubishi, Mitsui, C. Itoh & Co. and Nissho-Iwai Corp., which make many of the Japanese investments in small U.S. concerns, have no U.S. counterpart.
-Unfortunately, his mother had tickets for a recital by Itzhak Perlman the same night, and she was adamant about his attending. 
+Unfortunately, his mother had tickets for a recital by Itzhak Perlman the same night, and she was adamant about his attending.
 "I threw such a fit," says Mr. McDuffie, who had begun violin studies at the age of six.
-What Ms. Pfeiffer had going for her besides determination -- Ms. Stevens recalled that the actress was up one night until 3 a.m. practicing "My Funny Valentine" -- was an airy alto, a nice breathy quality and intelligence.
+sWhat Ms. Pfeiffer had going for her besides determination -- Ms. Stevens recalled that the actress was up one night until 3 a.m. practicing "My Funny Valentine" -- was an airy alto, a nice breathy quality and intelligence.

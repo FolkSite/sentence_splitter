@@ -31,15 +31,22 @@ public class FeaturesCollector {
 		        c == ';' || c == '\'' || c == '"' || c == '-');
 	}
 	
+	private boolean isRightBracket(char c) {
+		return c == '}' || c == ']' || c == ')';
+	}
+	
+	private boolean isLeftBracket(char c) {
+		return c == '{' || c == '[' || c == '(';
+	}
+	
 	// Expecting that there is line ending between sentences and no other line endings in s
 	public void parseEachPunctuationMark(String s) {
-		s = s.replaceAll("\\s+\\n", "\\n");
 		for (int i = 1; i < s.length(); ++i) {
 			char c = s.charAt(i);
 			if (c == '.' || c == '?' || c == '!') {
 				int y = (i + 1 == s.length() || s.charAt(i + 1) == '\n' || s.charAt(i + 1) == '\r') ? 1 : -1;
 				
-				final int FEATURES_COUNT = 23;
+				final int FEATURES_COUNT = 19;
 				double features[] = new double[FEATURES_COUNT];
 
 				int cur = 0;  // Current feature number
@@ -54,7 +61,7 @@ public class FeaturesCollector {
 				int p1 = i - 1;
 				while (p1 >= 0 && Character.isLetter(s.charAt(p1)))
 					--p1;
-				features[cur++] = (p1 >= 0 && (s.charAt(p1) == ' ' || s.charAt(p1) == '\n' || s.charAt(p1) == '\r' || (s.charAt(p1) == '-' && p1 - 1 >= 0 && s.charAt(p1 - 1) == '.')) && i - p1 <= 3) ? 1.0 : 0.0;
+				features[cur++] = (p1 >= 0 && (s.charAt(p1) == ' ' || s.charAt(p1) == '\n' || s.charAt(p1) == '\r' || (s.charAt(p1) == '-' && p1 - 1 >= 0 && s.charAt(p1 - 1) == '.'))) ? 7.0 - i + p1 : 0.0;
 
 				for (int cycle2 = 0; cycle2 < 2; ++cycle2) {
 					int p;
@@ -75,12 +82,8 @@ public class FeaturesCollector {
 						features[cur++] = Character.isDigit(x) ? 1.0 : 0.0;
 						features[cur++] = Character.isUpperCase(x) ? 1.0 : 0.0;
 						features[cur++] = Character.isLowerCase(x) ? 1.0 : 0.0;
-						features[cur++] = (x == '(') ? 1.0 : 0.0;
-						features[cur++] = (x == '[') ? 1.0 : 0.0;
-						features[cur++] = (x == '{') ? 1.0 : 0.0;
-						features[cur++] = (x == ')') ? 1.0 : 0.0;
-						features[cur++] = (x == ']') ? 1.0 : 0.0;
-						features[cur++] = (x == '}') ? 1.0 : 0.0;
+						features[cur++] = isLeftBracket(x) ? 1.0 : 0.0;
+						features[cur++] = isRightBracket(x) ? 1.0 : 0.0;
 					} else {
 						for (int j = 0; j < 10; ++j)
 							features[cur++] = 0.0;
