@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+import ru.ifmo.ctd.coursework.features_collector.SimpleFeaturesCollector;
 import ru.ifmo.ctd.coursework.ml.kernel.*;
 import ru.ifmo.ctd.coursework.ml.svm.SVMChecker;
 import ru.ifmo.ctd.coursework.ml.svm.Test;
@@ -86,8 +87,8 @@ public class Check {
 	
 	public static void main(String[] args) {
 		try {
-			Test[] train = new FeaturesCollector(Constants.TRAIN_FILE).getFeaturesCollection().toArray(new Test[0]);
-			Test[] test = new FeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
+			Test[] train = new SimpleFeaturesCollector(Constants.TRAIN_FILE).getFeaturesCollection().toArray(new Test[0]);
+			Test[] test = new SimpleFeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
 			SVMChecker checker = checker(train, Constants.RESULT);
 			Map<Integer, String> context = context(readFile(Constants.TEST_FILE));
 			int err = 0;

@@ -1,18 +1,19 @@
-package ru.ifmo.ctd.coursework.ml;
+package ru.ifmo.ctd.coursework.features_collector;
 
 import java.io.*;
 import java.util.*;
 
 import ru.ifmo.ctd.coursework.ml.svm.Test;
 
-public class FeaturesCollector {
+public class SimpleFeaturesCollector implements FeaturesCollector {
 	private ArrayList<Test> featuresCollection;
-	
-	public FeaturesCollector(String inputFileName) throws FileNotFoundException {
+
+	public SimpleFeaturesCollector(String inputFileName) throws FileNotFoundException {
 		featuresCollection = new ArrayList<Test>();
 		parsePunctuationMarksFromFile(inputFileName);
 	}
-	
+
+	@Override
 	public void parsePunctuationMarksFromFile(String fileName) throws FileNotFoundException {
 		Scanner scanner = null;
 		try {
@@ -40,6 +41,7 @@ public class FeaturesCollector {
 	}
 	
 	// Expecting that there is line ending between sentences and no other line endings in s
+	@Override
 	public void parseEachPunctuationMark(String s) {
 		s = s.replaceAll("\\s+\\n", "\\n");
 		for (int i = 1; i < s.length(); ++i) {
@@ -95,7 +97,8 @@ public class FeaturesCollector {
 			}
 		}
 	}
-	
+
+	@Override
 	public ArrayList<Test> getFeaturesCollection() {
 		return featuresCollection;
 	}

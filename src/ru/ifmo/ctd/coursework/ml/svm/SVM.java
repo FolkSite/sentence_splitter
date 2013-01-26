@@ -7,8 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import ru.ifmo.ctd.coursework.features_collector.SimpleFeaturesCollector;
 import ru.ifmo.ctd.coursework.ml.Constants;
-import ru.ifmo.ctd.coursework.ml.FeaturesCollector;
 import ru.ifmo.ctd.coursework.ml.kernel.Kernel;
 
 public class SVM {
@@ -62,7 +62,7 @@ public class SVM {
 		System.out.println("Train started");
 		Test[] test = null;
 		try {
-			 test = new FeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
+			 test = new SimpleFeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
