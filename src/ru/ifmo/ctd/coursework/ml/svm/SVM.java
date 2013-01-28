@@ -1,5 +1,6 @@
 package ru.ifmo.ctd.coursework.ml.svm;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import ru.ifmo.ctd.coursework.features_collector.SimpleFeaturesCollector;
+import ru.ifmo.ctd.coursework.features_collector.AdvancedFeaturesCollector;
 import ru.ifmo.ctd.coursework.ml.Constants;
 import ru.ifmo.ctd.coursework.ml.kernel.Kernel;
 
@@ -62,7 +63,8 @@ public class SVM {
 		System.out.println("Train started");
 		Test[] test = null;
 		try {
-			 test = new SimpleFeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
+			 //test = new SimpleFeaturesCollector().extractFeatures(new File(Constants.TEST_FILE));
+			test = new AdvancedFeaturesCollector().extractFeatures(new File(Constants.TEST_FILE));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

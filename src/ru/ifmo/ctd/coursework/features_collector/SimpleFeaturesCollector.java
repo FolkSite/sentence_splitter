@@ -1,31 +1,11 @@
 package ru.ifmo.ctd.coursework.features_collector;
 
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import ru.ifmo.ctd.coursework.ml.svm.Test;
 
-public class SimpleFeaturesCollector implements FeaturesCollector {
-	private ArrayList<Test> featuresCollection;
-
-	public SimpleFeaturesCollector(String inputFileName) throws FileNotFoundException {
-		featuresCollection = new ArrayList<Test>();
-		parsePunctuationMarksFromFile(inputFileName);
-	}
-
-	@Override
-	public void parsePunctuationMarksFromFile(String fileName) throws FileNotFoundException {
-		Scanner scanner = null;
-		try {
-			scanner = new Scanner(new BufferedInputStream(new FileInputStream(new File(fileName))), "UTF-8");
-			String fileContent = scanner.useDelimiter("\\Z").next();  // Reading whole file
-			parseEachPunctuationMark(fileContent);
-		} finally {
-			if (scanner != null) {
-				scanner.close();
-			}
-		}
-	}
+public class SimpleFeaturesCollector extends FeaturesCollector {
 	
 	private boolean isPunctuationMark(char c) {
 		return (c == '.' || c == '?' || c == '!' || c == ',' || c == ':' ||
@@ -42,14 +22,15 @@ public class SimpleFeaturesCollector implements FeaturesCollector {
 	
 	// Expecting that there is line ending between sentences and no other line endings in s
 	@Override
-	public void parseEachPunctuationMark(String s) {
+	public Test[] extractFeatures(String s) {
 		s = s.replaceAll("\\s+\\n", "\\n");
+		List<Test> tests = new ArrayList<Test>();
 		for (int i = 1; i < s.length(); ++i) {
 			char c = s.charAt(i);
 			if (c == '.' || c == '?' || c == '!') {
 				int y = (i + 1 == s.length() || s.charAt(i + 1) == '\n' || s.charAt(i + 1) == '\r') ? 1 : -1;
 				
-				final int FEATURES_COUNT = 19;
+				final int FEATURES_COUNT = 15;
 				double features[] = new double[FEATURES_COUNT];
 
 				int cur = 0;  // Current feature number
@@ -87,19 +68,16 @@ public class SimpleFeaturesCollector implements FeaturesCollector {
 						features[cur++] = Character.isLowerCase(x) ? 1.0 : 0.0;
 						features[cur++] = isLeftBracket(x) ? 1.0 : 0.0;
 						features[cur++] = isRightBracket(x) ? 1.0 : 0.0;
-					} else {
-						for (int j = 0; j < 10; ++j)
-							features[cur++] = 0.0;
 					}
 				}
 
-				featuresCollection.add(new Test(features, FEATURES_COUNT, y));
+				tests.add(new Test(features, FEATURES_COUNT, y));
 			}
 		}
+		return tests.toArray(new Test[0]);
 	}
-
-	@Override
-	public ArrayList<Test> getFeaturesCollection() {
-		return featuresCollection;
+	
+	public String toString() {
+		return "SimpleFeaturesCollector";
 	}
 }

@@ -1,6 +1,7 @@
 package ru.ifmo.ctd.coursework.ml;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import ru.ifmo.ctd.coursework.features_collector.SimpleFeaturesCollector;
+import ru.ifmo.ctd.coursework.features_collector.*;
 import ru.ifmo.ctd.coursework.ml.kernel.*;
 import ru.ifmo.ctd.coursework.ml.svm.SVMChecker;
 import ru.ifmo.ctd.coursework.ml.svm.Test;
@@ -24,6 +25,17 @@ public class Check {
 			return new InhomogeneousKernel(Integer.parseInt(args[0]));
 		case GaussianKernel :
 			return new GaussianKernel(Double.parseDouble(args[0]));
+		default :
+			throw new IllegalArgumentException("Unknown kernel : " + name);
+		}
+	}
+	
+	private static FeaturesCollector collector(String name) {
+		switch (FeaturesCollectors.valueOf(name)) {
+		case SimpleFeaturesCollector :
+			return new SimpleFeaturesCollector();
+		case AdvancedFeaturesCollector :
+			return new AdvancedFeaturesCollector();
 		default :
 			throw new IllegalArgumentException("Unknown kernel : " + name);
 		}
@@ -59,10 +71,13 @@ public class Check {
 		return context;
 	}
 	
-	private static SVMChecker checker(Test[] train, String fileName) throws IOException {
+	private static void init(String fileName) throws IOException {
 		BufferedReader bf = null;
 		try {
 			bf = new BufferedReader(new FileReader(fileName));
+			collector = collector(bf.readLine().trim());
+			train = collector.extractFeatures(new File(Constants.TRAIN_FILE));
+			test = collector.extractFeatures(new File(Constants.TEST_FILE));
 			String[] ss = bf.readLine().split("\\s+");
 			String name = ss[0];
 			String[] arg = new String[ss.length - 1];
@@ -77,7 +92,7 @@ public class Check {
 				a[i] = Double.parseDouble(st.nextToken());
 			}
 			double b = Double.parseDouble(bf.readLine());
-			return new SVMChecker(train, kernel, a, b);
+			checker = new SVMChecker(train, kernel, a, b);
 		} finally {
 			if (bf != null) {
 				bf.close();
@@ -85,12 +100,16 @@ public class Check {
 		}
 	}
 	
+	private static FeaturesCollector collector;
+	private static Test[] train;
+	private static Test[] test;
+	private static SVMChecker checker;
+	private static Map<Integer, String> context;
+	
 	public static void main(String[] args) {
 		try {
-			Test[] train = new SimpleFeaturesCollector(Constants.TRAIN_FILE).getFeaturesCollection().toArray(new Test[0]);
-			Test[] test = new SimpleFeaturesCollector(Constants.TEST_FILE).getFeaturesCollection().toArray(new Test[0]);
-			SVMChecker checker = checker(train, Constants.RESULT);
-			Map<Integer, String> context = context(readFile(Constants.TEST_FILE));
+			init(Constants.RESULT);
+			context = context(readFile(Constants.TEST_FILE));
 			int err = 0;
 			int all = test.length;
 			for (int i = 0; i < test.length; ++i) {
