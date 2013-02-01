@@ -45,7 +45,7 @@ public class SimpleFeaturesCollector extends FeaturesCollector {
 				int p1 = i - 1;
 				while (p1 >= 0 && Character.isLetter(s.charAt(p1)))
 					--p1;
-				features[cur++] = (p1 >= 0 && (s.charAt(p1) == ' ' || s.charAt(p1) == '\n' || s.charAt(p1) == '\r' || (s.charAt(p1) == '-' && p1 - 1 >= 0 && s.charAt(p1 - 1) == '.'))) ? 7.0 - i + p1 : 0.0;
+				features[cur++] = (p1 >= 0 && (s.charAt(p1) == ' ' || s.charAt(p1) == '\n' || s.charAt(p1) == '\r' || (s.charAt(p1) == '-' && p1 - 1 >= 0 && s.charAt(p1 - 1) == '.'))) ? 6.0 - i + p1 : 0.0;
 
 				for (int cycle2 = 0; cycle2 < 2; ++cycle2) {
 					int p;

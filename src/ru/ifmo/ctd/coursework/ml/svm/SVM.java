@@ -1,15 +1,10 @@
 package ru.ifmo.ctd.coursework.ml.svm;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import ru.ifmo.ctd.coursework.features_collector.AdvancedFeaturesCollector;
-import ru.ifmo.ctd.coursework.ml.Constants;
 import ru.ifmo.ctd.coursework.ml.kernel.Kernel;
 
 public class SVM {
@@ -39,42 +34,21 @@ public class SVM {
 			throw new IllegalArgumentException("C is not positive : " + C);
 		}
 		this.C = C;
-		random = new Random(System.nanoTime());
+		random = new Random();
 		alpha = new double[tests.length];
 		e = new double[tests.length];
 		b = 0;
 	}
 	
-	private void dump() {
-		PrintWriter result = null;
-		try {
-			result = new PrintWriter(Constants.RESULT);
-			result.println(this);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} finally {
-			if (result != null) {
-				result.close();
-			}
-		}
-	}
-	
 	public void train() {
 		System.out.println("Train started");
-		Test[] test = null;
-		try {
-			 //test = new SimpleFeaturesCollector().extractFeatures(new File(Constants.TEST_FILE));
-			test = new AdvancedFeaturesCollector().extractFeatures(new File(Constants.TEST_FILE));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
 		int steps = 0;
 		int numChanged = 0;
 		boolean examineAll = true;
 		while (numChanged > 0 || examineAll) {
 			numChanged = 0;
 			for (int i = 0; i < tests.length; ++i) {
-				if (examineAll || alpha[i] < 0 && alpha[i] < C) {
+				if (examineAll || alpha[i] > 0 && alpha[i] < C) {
 					numChanged += examine(i);
 				}
 			}
@@ -83,17 +57,17 @@ public class SVM {
 			} else if (numChanged == 0) {
 				examineAll = true;
 			}
-			if (++steps % 100 == 0) {
-				dump();
-				SVMChecker c = new SVMChecker(tests, kernel, alpha, b);
-				int all = test.length;
+			if (++steps % 250 == 0) {
+				/*SVMChecker c = new SVMChecker(tests, kernel, alpha, b);
+				int all = tests.length;
 				int err = 0;
-				for (Test t : test) {
+				for (Test t : tests) {
 					if ((c.value(t.getFeatures()) > 0) != (t.getY() == 1)) {
 						++err;
 					}
 				}
-				System.out.println("Iteration " + steps + " [ERRORS] : " + err + " / " + all + " : " + String.format("%.2f", (double)err / all * 100));
+				System.out.println("Iteration " + steps + " [ERRORS] : " + err + "/" + all + " " + String.format("%.2f", ((double) err) / all * 100));*/
+				System.out.println("Iteration " + steps + " " + numChanged);
 			}
 		}
 		isDone = true;
@@ -118,16 +92,22 @@ public class SVM {
 			}
 			if (list.size() > 1) {
 				int k = 0;
-				for (int i = 0; i < list.size(); ++i) {
-					if (e2 * Double.compare(e[list.get(i)], e[k]) < 0) {
-						k = i;
+				if (e2 > 0) {
+					for (int i = 0; i < list.size(); ++i) {
+						if (e[list.get(i)] < e[k]) {
+							k = i;
+						}
+					}
+				} else {
+					for (int i = 0; i < list.size(); ++i) {
+						if (e[list.get(i)] > e[k]) {
+							k = i;
+						}
 					}
 				}
 				if (takeStep(list.get(k), i2)) {
 					return 1;
 				}
-			}
-			if (list.size() > 0) {
 				for (int i = random.nextInt(list.size()), step = 0; step < list.size(); ++i, ++step) {
 					if (takeStep((list.size() + i) % list.size(), i2)) {
 						return 1;
@@ -169,7 +149,7 @@ public class SVM {
 		double a1 = 0;
 		double a2 = 0;
 		if (eta < 0) {
-			a2 = alpha[i2] - y2 * (e(i1) - e(i2) / eta);
+			a2 = alpha[i2] - y2 * (e(i1) - e(i2)) / eta;
 			if (a2 < l) {
 				a2 = l;
 			} else if (a2 > h) {
@@ -203,7 +183,7 @@ public class SVM {
 			double k2 = kernel.scalar(tests[i].getFeatures(), tests[i2].getFeatures());
 			e[i] = e[i] + b - tests[i1].getY() * alpha[i1] * k1 - tests[i2].getY() * alpha[i2] * k2;
 			e[i] = e[i] - bn + tests[i1].getY() * a1 * k1 + tests[i2].getY() * a2 * k2;
-		}		
+		}
 		alpha[i1] = a1;
 		alpha[i2] = a2;
 		b = bn;

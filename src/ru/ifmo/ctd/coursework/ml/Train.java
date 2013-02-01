@@ -11,14 +11,13 @@ import ru.ifmo.ctd.coursework.ml.svm.Test;
 public class Train {
 	
 	public static final int DEGREE = 2;
-	public static final double GAMMA = 1.0 / 19;
+	public static final double GAMMA = 1.0 / 15;
 	public static final double C = 75;
 	
 	public static void main(String[] args) {
 		PrintWriter result = null;
 		try {
-			FeaturesCollector collector = new AdvancedFeaturesCollector();
-			//Test[] tests = collector.extractFeatures(new File(Constants.TRAIN_FILE));
+			FeaturesCollector collector = new SimpleFeaturesCollector();
 			Test[] tests = collector.extractFeatures(new File(Constants.TRAIN_FILE));
 			Kernel kernel = new GaussianKernel(GAMMA);
 			SVM svm = new SVM(tests, kernel, C);

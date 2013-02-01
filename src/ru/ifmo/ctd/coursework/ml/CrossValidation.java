@@ -71,11 +71,11 @@ public class CrossValidation {
 	
 	public static void main(String[] args) {
 		try {
-			train = new SimpleFeaturesCollector().extractFeatures(new File(Constants.RESULT));
+			train = new SimpleFeaturesCollector().extractFeatures(new File(Constants.TRAIN_FILE));
 			double C = 50;
 			int parts = 5;
 			for (int i = 0; i < parts; ++i) {
-				new Thread(new Runner(i + 1, getTrain(train, i, parts), getTest(train, i, parts), new GaussianKernel(1.0 / 20), C)).start();
+				new Thread(new Runner(i + 1, getTrain(train, i, parts), getTest(train, i, parts), new GaussianKernel(1.0 / 15), C)).start();
 				C += 25;
 			}
 		} catch (FileNotFoundException e) {

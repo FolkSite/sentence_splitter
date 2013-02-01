@@ -18,14 +18,10 @@ public class AdvancedFeaturesCollector extends FeaturesCollector {
 		List<Test> list = new ArrayList<Test>();
 		Test[] test = collector.extractFeatures(s);
 		int length = test[0].getFeatures().length;
-		//final int NUMBER_OF_FEATURES = length + length * (length - 1) / 2;
 		final int NUMBER_OF_FEATURES = length * (length - 1) / 2;
 		for (Test t : test) {
 			double[] features = new double[NUMBER_OF_FEATURES];
-			/*for (int i = 0; i < length; ++i) {
-				features[i] = t.getFeature(i);
-			}*/
-			int k = 0; //length;
+			int k = 0;
 			for (int i = 0; i < length; ++i) {
 				for (int j = i + 1; j < length; ++j) {
 					features[k++] = t.getFeature(i) + t.getFeature(j);
